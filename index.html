@@ -1,35 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open URL Video in xPola Player</title>
-    <meta name="description" content="Experience seamless video playback with Xpola Player. Our page allows you to effortlessly play video URLs, offering high-quality streaming with minimal buffering. Perfect for viewers seeking an optimized watching experience. Click to enjoy your favorite videos now.">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
-	<meta property="og:image" content=""/>
+  <meta charset="UTF-8">
+  <title>العد التنازلي لحلم الطب أو النفط</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #e8f5e9);
+      text-align: center;
+      padding-top: 50px;
+      direction: rtl;
+      color: #1b1b1b;
+    }
 
-<style> body { display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #000;
-    background-image: url('');
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
+    h1 {
+      font-size: 2em;
+      color: #0d3c61;
+      margin-bottom: 30px;
+    }
 
- } .play-button { background-color: #f7f7f7; color: #fff; border: none; padding: 10px; font-size: 24px; cursor: pointer; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; } .play-button:hover { background-color: #999; } .message-box { background-color: #333; border-radius: 8px; padding: 20px; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; z-index: 1000; } .message-box p { margin: 0 0 20px; color: #ecf0f1; } } .message-box .actions { margin-top: 20px; } .message-box button { background-color: transparent; border: none; color: #f40; font-size: 16px; margin: 0 10px; padding: 6px; cursor: pointer; } .message-box button:hover { text-decoration: underline; } .message-box .checkbox-container { display: flex; align-items: center; justify-content: center; margin-top: 20px; } .message-box .checkbox-container input { margin-right: 10px; } label { color: #9E9E9E; } 
+    .countdown {
+      font-size: 2.3em;
+      color: #14532d;
+      background-color: #ffffffee;
+      display: inline-block;
+      padding: 25px 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
 
-</style>
+    .dreams {
+      font-size: 1.2em;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #333;
+    }
 
+    .duaa {
+      font-size: 1.1em;
+      font-style: italic;
+      color: #0f5132;
+      margin-top: 15px;
+    }
+
+    .icons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .icon-box {
+      width: 140px;
+      padding: 20px;
+      background-color: #ffffffdd;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .icon-box:hover {
+      transform: scale(1.05);
+    }
+
+    .icon-box img,
+    .icon-box svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+    }
+
+    .icon-label {
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    @media (max-width: 600px) {
+      .countdown {
+        font-size: 1.5em;
+        padding: 20px;
+      }
+      .icons {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<button onClick="location.href='intent://XPOLA808eGRkYGMqPz92fHFoPX11dHlxPnN/fT9meXR1fz1jeHF7cT92fHFoPWB8cWl1Yj5geGAveXQteGRkYGM1I1E1IlY1IlZ8eWZ1PXQ9ICI9ZH90ZGY9dHI+cXtxfXF5anV0Pn51ZDUiVmZxYnlxfmQ1IlZmIXJ8cXN7f2VkNSJWY2B/PXh0PSMoPXQ9Y3h/YmR0ZmI1IlZUUUNYT1RRQ1g1IlZceWZ1NSJWc3hxfn51fDUiKHV+ZD14dD0gITUiKTUiVn1xfnl2dWNkPn1gdDUjVnh0fmRjNSNUY2Q1I1QhJyQiISAoIykibnVoYDUjVCEnJCIhIiInKSJucXN8NSNUNSJWZnFieXF+ZDUiVmYhcnxxc3t/ZWQ1IlZjYH89eHQ9Iyg9dD1jeH9iZHRmYjUiVjUiUW55dDUjVHUlKSF0JiV2PSIjIyA9JCh0dD0pKXUiPXQkcSQlIXMjJ3VydW50cWRxNSNUdnEhdicgISU9IiUhIj0kdSclPSgiJ3U9IHQmJnMlKSIkKHYpbnh9cXM1I1RyJiVxJXVzKXMkKXEldSMlJSJ1dCIpdCdxciMoKXUlJiZ0cSEpdSIlcXZyJXUidnYpJCMiKSUiJHV0dSElKSkgNSImeHRzf2J1NSNUIj4hIT4jNnt1aS0gcScpIyR0dHRzIyEjJnEmKSIiJSgkcikmcyN2dCF1JSomJyZ1JnQhdHQgIHJ2cnUiJiYgICN1dnF2IHUjcXEgIjZ8f3d/LTZ8eX57LWxgfHFpdWI9ZGlgdS1ndXJgfHFpdWJsZHlkfHUtcnV5fjBjYH9iZA==;#Intent;scheme=xmtv;package=com.xpola.player;end'" class="play-button">
-<svg fill="#000000" height="80px" width="80px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60" xml:space="preserve">
-    <g>
-        <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30 c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15 C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
-        <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30 S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-    </g>
-</svg>
-</button>
+  <h1>العد التنازلي لبداية امتحانات السادس المصيرية</h1>
+  <div class="countdown" id="countdown">جارٍ الحساب...</div>
+
+  <div class="dreams">
+    حلمي الأول: <strong>القبول في كلية الطب العام</strong><br>
+    وإن لم يُكتب لي، فأتمنى أن يكون البديل <strong>معهد النفط</strong>
+  </div>
+
+  <div class="duaa">
+    اللهم ارزقني القبول في ما أتمنى، وسهّل لي طريقي، ووفقني لما فيه الخير والنجاح.
+  </div>
+
+  <div class="icons">
+    <div class="icon-box">
+      <img src="https://images.vexels.com/media/users/3/151981/isolated/preview/f8863741dba8034b3e1d4809a01c782a-stethoscope-icon-medical-icons.png?width=380" 
+           alt="الطب العام">
+      <div class="icon-label">الطب العام</div>
+    </div>
+
+    <div class="icon-box">
+      <img src="https://media.lordicon.com/icons/wired/outline/2114-oil-pump.svg" 
+           alt="معهد النفط">
+      <div class="icon-label">معهد النفط</div>
+    </div>
+  </div>
+
+  <script>
+    const countdownEl = document.getElementById('countdown');
+
+    const exams = [
+      { name: "الرياضيات", date: new Date("2025-06-25T07:00:00") },
+      { name: "الكيمياء", date: new Date("2025-06-28T07:00:00") },
+      { name: "الفيزياء", date: new Date("2025-07-01T07:00:00") }
+    ];
+
+    function getNextExam() {
+      const now = new Date();
+      return exams.find(exam => exam.date > now);
+    }
+
+    function updateCountdown() {
+      const nextExam = getNextExam();
+
+      if (!nextExam) {
+        countdownEl.innerHTML = "انتهت امتحاناتك! الله يحقق لك كل خير!";
+        return;
+      }
+
+      const now = new Date().getTime();
+      const distance = nextExam.date.getTime() - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `باقي على امتحان <strong>${nextExam.name}</strong>: ${days} يوم - ${hours} ساعة - ${minutes} دقيقة - ${seconds} ثانية`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
 </body>
 </html>
-
-    
